@@ -1,7 +1,11 @@
 package entities;
 
-public class Area {
-	public double area(Poligono tipoBase, double arresta) {
+public interface Area {
+	Poligono getPoligono();
+	double getArrestaBase();
+	
+	default double area(Poligono tipoBase, double arresta) {		
+		
 		double areaS = 1.0;
 		switch (tipoBase) {
 		case QUADRADO:

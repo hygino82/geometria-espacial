@@ -1,7 +1,6 @@
 package entities;
 
-public class Prisma extends Poliedro implements GerarValores {
-	public Area area;
+public class Prisma extends Poliedro implements GerarValores, Area {
 
 	public Prisma(Poligono poligono, Double altura, Double arrestaBase) {
 		super(poligono, altura, arrestaBase);
@@ -31,7 +30,7 @@ public class Prisma extends Poliedro implements GerarValores {
 		}
 
 		if (getPoligono() == Poligono.CIRCULO) {
-			areas = area.area(getPoligono(), getArrestaBase());
+			areas = area(getPoligono(), getArrestaBase());
 		} else {
 			areas = n * getArrestaBase() * getAltura();
 		}
@@ -40,18 +39,9 @@ public class Prisma extends Poliedro implements GerarValores {
 
 	@Override
 	public Double areaBase() {
-		// Poliedro p = new Prisma(getPoligono(), super.getAltura(),
-		// super.getArrestaBase());
-		
-		return 0.0;
-		
-		Double areas = area.area(super.getPoligono(), super.getArrestaBase());
-		if (areas != null) {
-			return areas;
-		} 
-		return 0.0;
-			
-		
+		double areas = area(super.getPoligono(), super.getArrestaBase());
+		return areas;
+
 	}
 
 	@Override

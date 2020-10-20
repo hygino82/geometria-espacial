@@ -11,10 +11,10 @@ public class Program {
 		System.out.println(p.getPoligono());
 		System.out.println(p.getAltura());
 		System.out.println(p.getArrestaBase());
-		//System.out.println("Área da base: "+ p.areaBase());
-		//System.out.println("Área da lateral: "+ p.areaLateral());
-		//System.out.println("Área total: "+ p.areaTotal());
-		//System.out.println("Volume: "+ p.volume());
+		System.out.println("Área da base: "+ p.areaBase());
+		System.out.println("Área da lateral: "+ p.areaLateral());
+		System.out.println("Área total: "+ p.areaTotal());
+		System.out.println("Volume: "+ p.volume());
 	}
 
 }
