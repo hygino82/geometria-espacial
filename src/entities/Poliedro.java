@@ -5,11 +5,7 @@ public abstract class Poliedro {
 	private double altura;
 	private double arrestaBase;
 	
-	public Poliedro() {
-	}
-
-
-	public Poliedro(Poligono poligono, double altura, double arrestaBase) {
+	public Poliedro(Poligono poligono, Double altura, Double arrestaBase) {
 		this.poligono = poligono;
 		this.altura = altura;
 		this.arrestaBase = arrestaBase;

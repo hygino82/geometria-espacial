@@ -1,20 +1,24 @@
 package entities;
 
 public class Area {
-	public Double area(Poligono tipoBase, double arresta) {
-		if  (tipoBase == Poligono.QUADRADO) {
-			return Math.pow(arresta, 2.0);
+	public double area(Poligono tipoBase, double arresta) {
+		double areaS = 1.0;
+		switch (tipoBase) {
+		case QUADRADO:
+			areaS = Math.pow(arresta, 2.0);
+			break;
+		case TRIANGULO_EQUILATERO:
+			areaS = Math.pow(arresta, 2.0) * Math.sqrt(3.0) / 4.0;
+			break;
+		case HEXAGONO_REGULAR:
+			areaS = 3.0 * Math.pow(arresta, 2.0) * Math.sqrt(3.0) / 2.0;
+			break;
+		case CIRCULO:
+			areaS = Math.pow(arresta, 2.0) * Math.PI;
+			break;
 		}
-		else if (tipoBase  == Poligono.TRIANGULO_EQUILATERO) {
-			return Math.pow(arresta, 2.0) * Math.sqrt(3.0) / 4.0;
-		}
-		else if (tipoBase  == Poligono.HEXAGONO_REGULAR) {
-			return 3.0 * Math.pow(arresta, 2.0) * Math.sqrt(3.0) / 2.0;
-		}
-		else if (tipoBase  == Poligono.CIRCULO) {
-			return Math.pow(arresta, 2.0) * Math.PI;
-		}
-		return null;
+
+		return areaS;
 	}
 
 }
