@@ -14,7 +14,7 @@ public class Prisma extends Poliedro implements GerarValores, Area {
 	@Override
 	public Double areaLateral() {
 		int n = 1;
-		double areas;
+		double areas = 0;
 		switch (super.getPoligono()) {
 		case QUADRADO:
 			n = 4;
@@ -26,14 +26,12 @@ public class Prisma extends Poliedro implements GerarValores, Area {
 			n = 6;
 			break;
 		default:
-			return null;
+			areas = 2 * Math.PI * getAltura();
 		}
 
-		if (getPoligono() == Poligono.CIRCULO) {
-			areas = area(getPoligono(), getArrestaBase());
-		} else {
-			areas = n * getArrestaBase() * getAltura();
-		}
+		if (getPoligono() != Poligono.CIRCULO) {
+			areas = getArrestaBase() * getAltura() * n;
+		} 
 		return areas;
 	}
 
