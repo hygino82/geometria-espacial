@@ -81,5 +81,20 @@ public class Tronco extends Poliedro implements GerarValores, Area {
 		return areaBase() + areaBase2() + areaLateral();
 
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("O tronco de pirâmide possui como base um "+ getPoligono());
+		sb.append("\nArresta da primeira base: " + String.format("%.4f", getArrestaBase()));
+		sb.append("\nArresta da segunda base: " + String.format("%.4f", getArrestaSegundaBase()));
+		sb.append("\nAltura: " + String.format("%.4f", getAltura()));
+		sb.append("\nÁrea da primeira base: " + String.format("%.4f", areaBase()));
+		sb.append("\nÁrea da segunda base: " + String.format("%.4f", areaBase2()));
+		sb.append("\nÁrea lateral: " + String.format("%.4f", areaLateral()));
+		sb.append("\nÁrea total: " + String.format("%.4f", areaTotal()));
+		sb.append("\nVolume: " + String.format("%.4f", volume()));
+		return sb.toString();
+	}
 
 }

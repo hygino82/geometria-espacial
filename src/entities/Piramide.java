@@ -60,5 +60,18 @@ public class Piramide extends Poliedro implements GerarValores,Area
 	public Double areaTotal() {
 		return areaBase() + areaLateral();
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("A pirâmide possui como base um "+ getPoligono());
+		sb.append("\nArresta da base: " + String.format("%.4f", getArrestaBase()));
+		sb.append("\nAltura: " + String.format("%.4f", getAltura()));
+		sb.append("\nÁrea da base: " + String.format("%.4f", areaBase()));
+		sb.append("\nÁrea lateral: " + String.format("%.4f", areaLateral()));
+		sb.append("\nÁrea total: " + String.format("%.4f", areaTotal()));
+		sb.append("\nVolume: " + String.format("%.4f", volume()));
+		return sb.toString();
+	}
 
 }
