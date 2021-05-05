@@ -5,5 +5,4 @@ public enum Poligono {
 	TRIANGULO_EQUILATERO,
 	HEXAGONO_REGULAR,
 	CIRCULO
-
 }

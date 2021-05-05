@@ -21,8 +21,6 @@ public interface Area {
 			areaS = Math.pow(arresta, 2.0) * Math.PI;
 			break;
 		}
-
 		return areaS;
 	}
-
 }

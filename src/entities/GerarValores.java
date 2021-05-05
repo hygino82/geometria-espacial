@@ -5,5 +5,4 @@ public interface GerarValores {
 	Double areaLateral();
 	Double areaBase();
 	Double areaTotal();
-
 }
