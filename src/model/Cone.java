@@ -1,6 +1,6 @@
 package model;
 
-public class Cone extends SolidoRevolucao {
+public final class Cone extends SolidoRevolucao {
 	private final double raio;
 	private final double altura;
 	private final double geratriz;

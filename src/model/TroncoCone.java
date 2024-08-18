@@ -1,6 +1,6 @@
 package model;
 
-public class TroncoCone extends SolidoRevolucao {
+public final class TroncoCone extends SolidoRevolucao {
 	private final double raioMaior;
 	private final double raioMenor;
 	private final double altura;

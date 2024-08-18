@@ -1,6 +1,6 @@
 package model;
 
-public class Esfera extends SolidoRevolucao {
+public final class Esfera extends SolidoRevolucao {
 	final double raio;
 
 	public Esfera(double raio) {
