@@ -2,7 +2,7 @@ package model;
 
 public abstract class SolidoGeometrico {
 	
-	abstract double areaTotal();
+	public abstract double areaTotal();
 
-	abstract double volume();
+	public abstract double volume();
 }
